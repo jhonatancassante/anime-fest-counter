@@ -1,5 +1,6 @@
-export class Left {
-  constructor (diff, conversor) {
+import { conversor } from './conversor.js'
+export class TimeLeft {
+  constructor (diff) {
     this.days = Math.floor(diff / conversor.day)
     this.hours = Math.floor((diff % conversor.day) / conversor.hour)
     this.minutes = Math.floor((diff % conversor.hour) / conversor.minute)

@@ -1,8 +1,6 @@
-export class Conversor {
-  constructor () {
-    this.second = 1000
-    this.minute = this.second * 60
-    this.hour = this.minute * 60
-    this.day = this.hour * 24
-  }
+export const conversor = {
+  second: 1000,
+  minute: 1000 * 60,
+  hour: 1000 * 60 * 60,
+  day: 1000 * 60 * 60 * 24
 }

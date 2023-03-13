@@ -1,25 +1,14 @@
 import { Evento } from './evento.js'
 import { Timer } from './timer.js'
-import { Conversor } from './conversor.js'
-import { Left } from './left.js'
+import { TimeLeft as Left } from './timeLeft.js'
+import { CalculateTime as Calculate } from './calculateTime.js'
 
 const evento = new Evento('Campinas Anime Fest', '19/03/2023', '10')
 
 const countDown = () => {
   const timer = new Timer()
-  const conversor = new Conversor()
-  const now = new Date()
-  const final = new Date(evento.year, evento.month, evento.day, evento.hour)
-  const diff = final - now
-  const left = new Left(diff, conversor)
-
-  if (diff < 0) {
-    const timePosition = document.querySelectorAll('.time-position')
-    timePosition.forEach(element => {
-      element.classList.toggle('expired-time')
-    })
-    diff = 0
-  }
+  const diff = new Calculate(evento)
+  const left = new Left(diff.getDiff())
 
   timer.setDay(left.getDays())
   timer.setHour(left.getHours())
