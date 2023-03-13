@@ -16,10 +16,11 @@
 
 body {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--tertiary-color);
 }
 
@@ -27,11 +28,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   height: 80px;
   width: 100%;
   background-color: var(--primary-color);
+  z-index: 1;
 }
 
 .page-header h1 {
@@ -45,6 +47,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   margin-top: 80px;
   width: 100%;
   height: 100%;
@@ -56,6 +59,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .time-position {
@@ -114,13 +118,12 @@ body {
   /*Cellphone*/
   .page-header {
     height: 120px;
-    z-index: 1;
   }
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 240px 0;
+    padding: 120px 0;
     width: 100%;
     height: 100%;
     background-image: url('../img/fundo.png');
