@@ -20,7 +20,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--tertiary-color);
 }
 
@@ -30,6 +30,7 @@ body {
   align-items: center;
   position: absolute;
   top: 0;
+  padding: 40px;
   height: 80px;
   width: 100%;
   background-color: var(--primary-color);
@@ -116,8 +117,12 @@ body {
 
 @media (max-width: 576px) {
   /*Cellphone*/
+  body {
+    height: auto;
+  }
   .page-header {
-    height: 120px;
+    height: auto;
+    padding: 20px;
   }
   .container {
     display: flex;
