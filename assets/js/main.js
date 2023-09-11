@@ -3,7 +3,7 @@ import { Timer } from './timer.js'
 import { TimeLeft as Left } from './timeLeft.js'
 import { CalculateTime as Calculate } from './calculateTime.js'
 
-const evento = new Evento('Mega Campinas Anime Fest', '20/08/2023', '10')
+const evento = new Evento('São Paulo Anime Fest', '24/09/2023', '10')
 
 const countDown = () => {
   const timer = new Timer()
