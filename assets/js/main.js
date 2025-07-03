@@ -19,7 +19,7 @@ const countDown = () => {
 
 const main = () => {
   const eventNameTag = document.getElementById('event-name')
-  eventNameTag.innerText = 'Contagem Regressiva Até o ' + evento.name + ':'
+  eventNameTag.innerText = 'Contagem Regressiva Até ' + evento.name + ':'
   document.title = evento.name
   setInterval(() => countDown(), 1000)
 }
